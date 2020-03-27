@@ -171,6 +171,31 @@ nav p {
     width: 4rem;
 }
 
+.travel-tag {
+    background-color: #c2d4d7;
+    width: 6rem;
+    bottom: 1.5rem;
+}
+
+.travel-tag a {
+    color: #000;
+}
+
+.travel-tag a:hover{
+    background-color: #000;
+    color: #fff;
+    text-decoration: none
+}
+
+.red-text a {
+    color: #000;
+}
+
+.red-text a:hover {
+    color: red;
+    text-decoration: none
+}
+
 .red-line a:hover {
     text-decoration: underline red;
 }
@@ -233,7 +258,6 @@ img3 {
 
 .img-tag2 {
     bottom: 1.7rem;
-    right: 1.3rem;
     width: 8.7rem;
 }
 
