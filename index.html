@@ -10,8 +10,8 @@
         <title>Newsweek-Clone</title>
     </head>
     <body>
-       <header class="container-fluid">
-           <nav class="navbar navbar-light text-light page-header py-2 d-none d-lg-flex">
+       <header class="container-fluid fixed-top">
+           <nav class="navbar nav1 navbar-light text-light page-header py-2 d-none d-lg-flex">
                <div class="pl-3">
                  <div class="d-inline-flex">
                     <img src="https://g.newsweek.com/img/weather/28.png" width="24" height="24" class="mt-3" alt=""/>
@@ -19,13 +19,26 @@
                  </div> 
                  <p>Mon, Mar 23, 2020</p>
                </div>
-               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Newsweek_Logo.svg/512px-Newsweek_Logo.svg.png" width="395" height="90" alt="" />
-               <!--<h5 class="display-4 font-weight-bold font-italic first-title">Newsweek</h5>-->
+               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Newsweek_Logo.svg/512px-Newsweek_Logo.svg.png" class="logo" alt="" />
                <div class="d-inline-flex mt-5">
                    <h4 id="sign-in" class="sign-in font-weight-bold my-3">SIGN IN</h4>
                    <p class="text-danger bg-white text-center font-weight-bold sub-btn my-3 mr-4">SUBSCRIBE ></p>
                </div>
            </nav>
+           <nav class="navbar navbar-light text-light page-header justify-content-between d-lg-none d-flex">
+               <div class="d-flex">
+                  <h5 class="display-4 font-weight-bold font-italic first-title">Newsweek</h5>
+                  <img src="https://g.newsweek.com/img/weather/28.png" class="mt-3 ml-3 cloud" alt=""/>
+                  <h4 class="mt-4 ml-2">25°<span class="d-none d-md-inline-block">NAIROBI, KE ></span> </h4>
+               </div>
+               <div class="d-flex justify-content-end">
+                   <h4 class="sign-in font-weight-bold my-3">SIGN IN</h4>
+                   <p class="text-danger bg-white text-center font-weight-bold sub-btn my-3 mr-3 p-1 h-25">SUBSCRIBE ></p>
+                   <i class="fa fa-bars fa-4x mt-2" aria-hidden="true"></i>
+               </div>
+           </nav>
+       </header>
+       <main class="container-fluid border-bottom py-3">
            <div class="header-bottom d-lg-flex align-items-center border-bottom bg-light d-none">
                <ul class="nav">
                   <li class="nav-item border-right text-dark text-center font-weight-bold" href="#">
@@ -67,57 +80,43 @@
                   </li>
                 </ul>
            </div>
-           <nav class="navbar navbar-light text-light page-header justify-content-md-between d-lg-none d-md-flex w-100">
-               <div class="d-flex flex-row w-35">
-                  <h5 class="display-4 font-weight-bold font-italic first-title w-11">Newsweek</h5>
-                  <img src="https://g.newsweek.com/img/weather/28.png" width="24" height="24" class="mt-3 ml-3" alt=""/>
-                  <h4 class="mt-4 ml-2 w-11">25°<span class="d-none d-md-inline-block">NAIROBI, KE ></span> </h4>
-               </div>
-               <div class="d-flex justify-content-end w-55">
-                   <h4 class="sign-in font-weight-bold my-3 w-18">SIGN IN</h4>
-                   <p class="text-danger bg-white text-center font-weight-bold sub-btn my-3 mr-3 w-18 p-1 h-25">SUBSCRIBE ></p>
-                   <i class="fa fa-bars fa-4x mt-2" aria-hidden="true"></i>
-               </div>
-           </nav>
-       </header>
-       <main class="container-fluid mt-3 border-bottom py-3">
-           <div class="row">
-               <div class="col-lg-3 col-md-6 col-xs-12">
+           <div class="row pt-4">
+               <div class="col-lg-3 col-md-6 col-xs-12 mt-md-5 mt-lg-0">
                   <div class="card border-0">
                    <h4 class="text-secondary font-weight-bold">FEATURED STORIES</h4> 
-                   <img class="card-img-top" src="https://d.newsweek.com/en/full/1575972/nyse.jpg?w=397&h=265&q=90&f=4cadb74419a6ee83152bf11c1b6a330d" alt="" />
-                   <p class=" h6 card-title text-danger text-center font-weight-bold bg-light w-25 mb-0">BUSINESS</p>
+                   <a href="#"><img class="card-img-top" src="https://d.newsweek.com/en/full/1575972/nyse.jpg?w=397&h=265&q=90&f=4cadb74419a6ee83152bf11c1b6a330d" alt="" /></a>
+                   <p class=" h4 card-title position-relative p-tag text-danger text-center font-weight-bold bg-light mb-0">BUSINESS</p>
                    <div class="card-body pt-2">
-                        <h2 class="font-weight-bold card-title" href="#">Donald Trump Should Close Stock Market Until COVID-19 Infections Decline</h2>
+                        <h2 class="font-weight-bold card-title red-line"><a class="text-dark" href="#">Donald Trump Should Close Stock Market Until COVID-19 Infections Decline</a></h2>
                         <p class="p-content card-text">J.Kyle Bass, who predicted the 2008 housing market crisis,
                         said the stock markets should be closed to keep people from making emotion decisions with their money.</p>
                    </div>
                 </div>
                 <div class="card border-0 mt-2">
-                   <img class="card-img-top" src="https://d.newsweek.com/en/full/1575956/wayne-lapierre.webp?w=397&h=265&q=90&f=70d52d493d04359d308e0110a843f7fd" alt="" />
-                   <p class=" h6 card-title text-danger text-center font-weight-bold bg-light w-25 mb-0">U.S.</p>
+                   <a href="#"><img class="card-img-top" src="https://d.newsweek.com/en/full/1575956/wayne-lapierre.webp?w=397&h=265&q=90&f=70d52d493d04359d308e0110a843f7fd" alt="" /></a>
+                   <p class=" h4 card-title text-danger text-center font-weight-bold bg-light us-tag position-relative mb-0">U.S.</p>
                    <div class="card-body">
-                        <h2 class="font-weight-bold card-title"><a class="text-dark" href="#">The National Rifle Association is Laying Off Staff Amid COVID-19 Outbreak</a></h2>
+                        <h2 class="font-weight-bold card-title red-line"><a class="text-dark" href="#">The National Rifle Association is Laying Off Staff Amid COVID-19 Outbreak</a></h2>
                         <p class="p-content card-text">According to a statement provided to Newsweek, "Salary adjustments announced today apply to all levels of the organization."</p>
                    </div>
                </div>
                <div class="card border-0 mt-2">
-                   <img class="card-img-top" src="https://d.newsweek.com/en/full/1576190/test-kits.webp?w=397&h=265&q=90&f=0b10478e7bc603c4ba6e2ae22cf4fcda" alt="" />
-                   <p class=" h6 card-title text-danger text-center font-weight-bold bg-light w-25 mb-0">U.S.</p>
+                   <a href="#"><img class="card-img-top" src="https://d.newsweek.com/en/full/1576190/test-kits.webp?w=397&h=265&q=90&f=0b10478e7bc603c4ba6e2ae22cf4fcda" alt="" /></a>
+                   <p class=" h4 card-title text-danger text-center font-weight-bold bg-light us-tag position-relative mb-0">U.S.</p>
                    <div class="card-body">
-                        <h2 class="font-weight-bold card-title"><a class="text-dark" href="#">Defense Production Act to Be for First Time to Make Virus Test Kits</a></h2>
+                        <h2 class="font-weight-bold card-title red-line"><a class="text-dark" href="#">Defense Production Act to Be for First Time to Make Virus Test Kits</a></h2>
                         <p class="p-content card-text">While the administration has in the past claimed that testing was available to anyone who needed it, this assertion has not been borne out in reality.</p>
                    </div>
                </div>
                </div>
-               <div class="col-lg-5 col-md-6 col-xs-12">
+               <div class="col-lg-5 col-md-6 col-xs-12 mt-md-5 mt-lg-0">
                 <div class="card border-0">
                    <h4 class="text-secondary font-weight-bold">TOP STORY</h4>
-                   <img class="card-img-top" src="https://d.newsweek.com/en/full/1575957/donald-trump.jpg?w=591&h=364&f=229eb35ae7782cced516c34c68ec4b6d" alt="" />
-                    <p class=" h6 card-title text-danger text-center font-weight-bold bg-light w-25 mb-0">U.S.</p>
+                   <a href="#"><img class="card-img-top" src="https://d.newsweek.com/en/full/1575957/donald-trump.jpg?w=591&h=364&f=229eb35ae7782cced516c34c68ec4b6d" alt="" /></a>
+                    <p class="h4 card-title text-danger text-center font-weight-bold bg-light us-tag position-relative mb-0">U.S.</p>
                     <div class="card border-0">
                         <div class="card-body">
-                             <h2 class="font-weight-bold class-title" href="#">'This Economy Wasn't Built To Be Shut Down,' Trump Says About Economy</h2>
+                             <h2 class="font-weight-bold class-title red-line"><a class="text-dark" href="#">'This Economy Wasn't Built To Be Shut Down,' Trump Says About Economy</a></h2>
                              <p class="card-text p-content">"We are doing things to help in that regard America will again and soon be open for business,"
                               Trump said, "a lot sooner than the three or four months that somebody was suggesting."</p>
                         </div>
@@ -157,9 +156,9 @@
               </div>
               <div class="card border-0">
                     <div class="d-flex border-bottom py-1">
-                      <img class="align-self-center" src="https://d.newsweek.com/en/full/1576154/new-york-governor-andrew-cuomo.jpg?w=95&h=95&f=bc04230566cddcce38bc963f7e87b141" alt="...">
+                      <a href="#"><img class="align-self-center" src="https://d.newsweek.com/en/full/1576154/new-york-governor-andrew-cuomo.jpg?w=95&h=95&f=bc04230566cddcce38bc963f7e87b141" alt="..."></a>
                       <div class="card-body ml-3">
-                        <h4 class="card-title font-weight-bold"><a class="text-dark" href="#">New York Governor Says Coronavirus Cases Doubling Every Three Days</a></h4>
+                        <h4 class="card-title font-weight-bold red-line"><a class="text-dark" href="#">New York Governor Says Coronavirus Cases Doubling Every Three Days</a></h4>
                         <p class="card-text p-content">Andrew Cuomo's comments come as coronavirus cases continue to soar in New York, 
                         making it the state with the most confirmed cases, 23,230.</p>
                       </div>
@@ -167,36 +166,36 @@
              </div>
              <div class="card border-0">
                     <div class="d-flex border-bottom py-1">
-                      <img class="align-self-center" src="https://d.newsweek.com/en/full/1575720/new-york-stock-exchange.webp?w=95&h=95&f=ad7892a34af80f155955dd0cf446dd16" alt="...">
+                      <a href="#"><img class="align-self-center" src="https://d.newsweek.com/en/full/1575720/new-york-stock-exchange.webp?w=95&h=95&f=ad7892a34af80f155955dd0cf446dd16" alt="..."></a>
                       <div class="card-body ml-3">
-                        <h4 class="card-title font-weight-bold"><a class="text-dark" href="#">Afghanistan, Taliban Agree to Free Prisoners Amid Coronavirus, ISIS Threats</a></h4>
+                        <h4 class="card-title font-weight-bold red-line"><a class="text-dark" href="#">Afghanistan, Taliban Agree to Free Prisoners Amid Coronavirus, ISIS Threats</a></h4>
                         <p class="card-text p-content">The U.S. Senate has approved a $1.8 trillion stimulus package as the economy reels from shutdowns caused by the coronavirus.</p>
                       </div>
                     </div>
              </div>
              <div class="card border-0">
                     <div class="d-flex border-bottom py-1">
-                      <img class="align-self-center" src="https://d.newsweek.com/en/full/1576279/coronavirus-police-vatican-march-2020.webp?w=95&h=95&f=bd5ca3c04a1d829aa800167c89708bd8" alt="...">
+                      <a href="#"><img class="align-self-center" src="https://d.newsweek.com/en/full/1576279/coronavirus-police-vatican-march-2020.webp?w=95&h=95&f=bd5ca3c04a1d829aa800167c89708bd8" alt="..."></a>
                       <div class="card-body ml-3">
-                        <h4 class="card-title font-weight-bold"><a class="text-dark" href="#">Italy's Coronavirus Death Toll Doubles China's, U.S. Cases Surpass 55,000</a></h4>
+                        <h4 class="card-title font-weight-bold red-line"><a class="text-dark" href="#">Italy's Coronavirus Death Toll Doubles China's, U.S. Cases Surpass 55,000</a></h4>
                         <p class="card-text p-content">India has also undertaken the largest lockdown to date in an effort to combat the spread of COVID-19.</p>
                       </div>
                     </div>
              </div>
              <div class="card border-0">
                     <div class="d-flex border-bottom py-1">
-                      <img class="align-self-center" src="https://d.newsweek.com/en/full/1576285/prince-charles.webp?w=95&h=95&f=a1c3e1c0e5cbd052fb778d02bdad344f" alt="...">
+                      <a href="#"><img class="align-self-center" src="https://d.newsweek.com/en/full/1576285/prince-charles.webp?w=95&h=95&f=a1c3e1c0e5cbd052fb778d02bdad344f" alt="..."></a>
                       <div class="card-body ml-3">
-                        <h4 class="card-title font-weight-bold"><a class="text-dark" href="#">Prince Charles, 71, Tests Positive for Coronavirus</a></h4>
+                        <h4 class="card-title font-weight-bold red-line"><a class="text-dark" href="#">Prince Charles, 71, Tests Positive for Coronavirus</a></h4>
                         <p class="card-text p-content">The heir to the British throne has tested positive for coronavirus, a spokesperson for Clarence House said.</p>
                       </div>
                     </div>
              </div>
              <div class="card border-0">
                     <div class="d-flex border-bottom py-1">
-                      <img class="align-self-center" src="https://d.newsweek.com/en/full/1576573/coronavirus-school-closure-inequality-gap.webp?w=95&h=95&f=6201922a15522a3d087e0e87ceafd6c3" alt="...">
+                      <a href="#"><img class="align-self-center" src="https://d.newsweek.com/en/full/1576573/coronavirus-school-closure-inequality-gap.webp?w=95&h=95&f=6201922a15522a3d087e0e87ceafd6c3" alt="..."></a>
                       <div class="card-body ml-3">
-                        <h4 class="card-title font-weight-bold"><a class="text-dark" href="#">School Closures Due to Coronavirus Could Widen Education Gap Among Students</a></h4>
+                        <h4 class="card-title font-weight-bold red-line"><a class="text-dark" href="#">School Closures Due to Coronavirus Could Widen Education Gap Among Students</a></h4>
                         <p class="card-text p-content">If schools don't reopen until fall, students who are already behind will likely fall further behind, widening the gap between
                         themselves and their more affluent peers.</p>
                       </div>
@@ -204,36 +203,36 @@
              </div>
              <div class="card border-0">
                     <div class="d-flex border-bottom py-1">
-                      <img class="align-self-center" src="https://d.newsweek.com/en/full/1576461/russia-president-vladimir-putin-coronavirus-covid-19-speech.webp?w=95&h=95&f=6e2eac957e41726b100279239e0511bd" alt="...">
+                      <a href="#"><img class="align-self-center" src="https://d.newsweek.com/en/full/1576461/russia-president-vladimir-putin-coronavirus-covid-19-speech.webp?w=95&h=95&f=6e2eac957e41726b100279239e0511bd" alt="..."></a>
                       <div class="card-body ml-3">
-                        <h4 class="card-title font-weight-bold"><a class="text-dark" href="#"></a>Putin Gives Russia Week Vacation, Tells Troops to Train to Stop Coronavirus</h4>
+                        <h4 class="card-title font-weight-bold red-line"><a class="text-dark" href="#"></a>Putin Gives Russia Week Vacation, Tells Troops to Train to Stop Coronavirus</h4>
                         <p class="card-text p-content">"Believe me, the safest thing now is to be at home," Russian President Vladimir Putin said, declaring a week-long national holiday from March 28 to April 5.</p>
                       </div>
                     </div>
              </div>
              <div class="card border-0">
                     <div class="d-flex border-bottom py-1">
-                      <img class="align-self-center" src="https://d.newsweek.com/en/full/1576241/dr-anthony-fauci-capitol-hearing.webp?w=95&h=95&f=ab3234ea20db696efaadb062af3c8095" alt="...">
+                      <a href="#"><img class="align-self-center" src="https://d.newsweek.com/en/full/1576241/dr-anthony-fauci-capitol-hearing.webp?w=95&h=95&f=ab3234ea20db696efaadb062af3c8095" alt="..."></a>
                       <div class="card-body ml-3">
-                        <h4 class="card-title font-weight-bold"><a class="text-dark" href="#">Dr. Fauci Says Coronavirus Outbreak Could 'Go Into Another Season'</a></h4>
+                        <h4 class="card-title font-weight-bold red-line"><a class="text-dark" href="#">Dr. Fauci Says Coronavirus Outbreak Could 'Go Into Another Season'</a></h4>
                         <p class="card-text p-content">The leading expert on infectious diseases said the outbreak going into another season could bring the world closer to a vaccine.</p>
                       </div>
                     </div>
              </div>
              <div class="card border-0">
                     <div class="d-flex border-bottom py-1">
-                      <img class="align-self-center" src="https://d.newsweek.com/en/full/1576475/amy-klobuchar.webp?w=95&h=95&f=a89a4454a341723a09097b92e566926b" alt="...">
+                      <a href="#"><img class="align-self-center" src="https://d.newsweek.com/en/full/1576475/amy-klobuchar.webp?w=95&h=95&f=a89a4454a341723a09097b92e566926b" alt="..."></a>
                       <div class="card-body ml-3">
-                        <h4 class="card-title font-weight-bold"><a class="text-dark" href="#">Amy Klobuchar Hits Back at Trump's Comparison of Coronavirus to Flu</a></h4>
+                        <h4 class="card-title font-weight-bold red-line"><a class="text-dark" href="#">Amy Klobuchar Hits Back at Trump's Comparison of Coronavirus to Flu</a></h4>
                         <p class="card-text p-content">The former Democratic presidential hopeful has revealed that her husband, who is 52, is receiving oxygen after testing positive for coronavirus.</p>
                       </div>
                     </div>
              </div>
              <div class="card border-0">
                     <div class="d-flex border-bottom py-1">
-                      <img class="align-self-center" src="https://d.newsweek.com/en/full/1576454/rsf-china-coronavirus-censorship-pandemic-journalists.webp?w=95&h=95&f=99c95807ce3c664f11f72a7687284b03" alt="...">
+                      <a href="#"><img class="align-self-center" src="https://d.newsweek.com/en/full/1576454/rsf-china-coronavirus-censorship-pandemic-journalists.webp?w=95&h=95&f=99c95807ce3c664f11f72a7687284b03" alt="..."></a>
                       <div class="card-body ml-3">
-                        <h4 class="card-title font-weight-bold"><a class="text-dark" href="#">China's Media Censorship Could Cost Thousands of Lives: Journalism Watchdog</a></h4>
+                        <h4 class="card-title font-weight-bold red-line"><a class="text-dark" href="#">China's Media Censorship Could Cost Thousands of Lives: Journalism Watchdog</a></h4>
                         <p class="card-text p-content">Reporters Without Borders claimed that Beijing's tight control of national media meant 
                         that the international community did not appreciate how serious the COVID-19 outbreak was until it was too late.</p>
                       </div>
@@ -241,18 +240,18 @@
              </div>
              <div class="card border-0">
                     <div class="d-flex border-bottom py-1">
-                      <img class="align-self-center" src="https://d.newsweek.com/en/full/1576293/welcome-wisconsin-sign.webp?w=95&h=95&f=a47739038c59c20b729f0fd259cdbd74" alt="...">
+                      <a href="#"><img class="align-self-center" src="https://d.newsweek.com/en/full/1576293/welcome-wisconsin-sign.webp?w=95&h=95&f=a47739038c59c20b729f0fd259cdbd74" alt="..."></a>
                       <div class="card-body ml-3">
-                        <h4 class="card-title font-weight-bold"><a class="text-dark" href="#">Wisconsin Hit by More Than 100,000 Unemployment Claims Over Nine Days</a></h4>
+                        <h4 class="card-title font-weight-bold red-line"><a class="text-dark" href="#">Wisconsin Hit by More Than 100,000 Unemployment Claims Over Nine Days</a></h4>
                         <p class="card-text p-content">The state recorded more than 21,000 initial claims on Monday, almost 20,000 more than the same day last year.</p>
                       </div>
                     </div>
              </div>
              <div class="card border-0">
                     <div class="d-flex border-bottom py-1">
-                      <img class="align-self-center" src="https://d.newsweek.com/en/full/1576237/north-american-deer-mouse-hantavirus-stock-getty.webp?w=95&h=95&f=e164f188c03bfc610f7cbb2f499d8cca" alt="...">
+                      <a href="#"><img class="align-self-center" src="https://d.newsweek.com/en/full/1576237/north-american-deer-mouse-hantavirus-stock-getty.webp?w=95&h=95&f=e164f188c03bfc610f7cbb2f499d8cca" alt="..."></a>
                       <div class="card-body ml-3">
-                        <h4 class="card-title font-weight-bold"><a class="text-dark" href="#">China Hantavirus Death Is Not Start of Another Coronavirus-like Outbreak</a></h4>
+                        <h4 class="card-title font-weight-bold red-line"><a class="text-dark" href="#">China Hantavirus Death Is Not Start of Another Coronavirus-like Outbreak</a></h4>
                         <p class="card-text p-content">"There is no need to worry about the hantavirus," said Yang Zhanqiu, virologist at Wuhan University.</p>
                       </div>
                     </div>
