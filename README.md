@@ -15,7 +15,7 @@ html, css
 Bootstrap
 
 ## Live Demo
-Live Demo Link
+[Live Demo Link](https://rawcdn.githack.com/blackpintz/newsweek-clone/1cab0c2314ed68657da922705f57b753ce97b4a8/index.html)
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
